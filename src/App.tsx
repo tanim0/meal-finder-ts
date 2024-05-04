@@ -30,13 +30,14 @@ const App = () => {
       area: strArea,
       category: strCategory,
     })
+    setMealName("")
   }
 
   return (
     <div>
       <Header/>
       <h1>こんにちは</h1>
-      <Form setMealName={setMealName} getMealData={getMealData}/>
+      <Form setMealName={setMealName} getMealData={getMealData} mealName={mealName} />
       <Recipe mealData={mealData}/>
     </div>
   )
