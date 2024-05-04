@@ -1,7 +1,11 @@
+import headerImg from "../assets/header-image.svg"
+
 const Header = () => {
 
   return (
-    <header>Header</header>
+    <header>
+      <a href=""><img src={headerImg} alt="heaer-image" /></a>
+    </header>
   )
 }
 

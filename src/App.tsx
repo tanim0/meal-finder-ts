@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Header from "./components/Header"
+import Layout from "./components/Layout"
 import Form from "./components/Form"
 import Recipe from "./components/Recipe"
 import Loading from "./components/Loading"
@@ -39,16 +39,15 @@ const App = () => {
   }
 
   return (
-    <div>
-      <Header/>
-      <h1>こんにちは</h1>
+    // コンポーネントをコンポーネントで挟むと間に挟まれた要素はchildrenという特殊なporpsで渡される・・・型情報を定義する必要がある
+    <Layout>
       <Form setMealName={setMealName} getMealData={getMealData} mealName={mealName} />
       {loading?
         <Loading/>
         :
         <Recipe mealData={mealData}/>
       }
-    </div>
+    </Layout>
   )
 }
 
