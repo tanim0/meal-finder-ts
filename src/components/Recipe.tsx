@@ -34,7 +34,7 @@ const Recipe = (
   return (
     <>
     {id && // id(=レシピが存在する場合のみ表示)
-      <div>
+      <div className="recipe">
         <h2>{name}</h2>
         <p>エリア<span>{area}</span></p>
         <p>カテゴリー<span>{category}</span></p>
