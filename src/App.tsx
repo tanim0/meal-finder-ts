@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Header from "./components/Header"
 import Form from "./components/Form"
+import Recipe from "./components/Recipe"
 
 const App = () => {
   const [mealName, setMealName] = useState("") // <useStateの型情報>
@@ -36,6 +37,7 @@ const App = () => {
       <Header/>
       <h1>こんにちは</h1>
       <Form setMealName={setMealName} getMealData={getMealData}/>
+      <Recipe mealData={mealData}/>
     </div>
   )
 }
